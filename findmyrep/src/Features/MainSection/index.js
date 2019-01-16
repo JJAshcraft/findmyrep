@@ -3,21 +3,37 @@ import RepTable from "../RepTable";
 import RepInfoBox from "../RepInfoBox";
 import Grid from "@material-ui/core/Grid";
 import propTypes from "prop-types";
+import styled from "styled-components";
+
+/* Grid items modified so order can be switched on mobile view */
+const GridItemRepTable = styled(Grid)`
+  order: 1;
+  @media (min-width: 764px) {
+    order: 0;
+  }
+`;
+
+const GridItemRepInfoBox = styled(Grid)`
+  order: 0;
+  @media (min-width: 764px) {
+    order: 1;
+  }
+`;
 
 const MainSection = props => {
   return (
     <Fragment>
       <Grid container spacing={24}>
-        <Grid item xs={12} sm={6}>
+        <GridItemRepTable item xs={12} sm={6}>
           <RepTable
             data={props.data}
             title={props.title}
             updateInfoBox={props.updateInfoBox}
           />
-        </Grid>
-        <Grid item xs={12} sm={6}>
+        </GridItemRepTable>
+        <GridItemRepInfoBox item xs={12} sm={6}>
           <RepInfoBox memberInfo={props.memberInfo} />
-        </Grid>
+        </GridItemRepInfoBox>
       </Grid>
     </Fragment>
   );
