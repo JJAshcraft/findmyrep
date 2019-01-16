@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RepDropDown component renders with proper styling 1`] = `
+<div
+  className="MuiFormControl-root-4 RepDropDown-formControl-2"
+>
+  <div
+    className="MuiInputBase-root-28 MuiInput-root-15 MuiInput-underline-19 MuiInputBase-formControl-29 MuiInput-formControl-16 RepDropDown-selectEmpty-3"
+    onClick={[Function]}
+  >
+    <div
+      className="MuiNativeSelect-root-8"
+    >
+      <select
+        aria-invalid={false}
+        className="MuiNativeSelect-select-9 MuiInputBase-input-38 MuiInput-input-23"
+        disabled={false}
+        name="title"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={false}
+      >
+        <option
+          value=""
+        />
+        <option
+          value="Representatives"
+        >
+          Representatives
+        </option>
+        <option
+          value="Senators"
+        >
+          Senators
+        </option>
+      </select>
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root-45 MuiNativeSelect-icon-14"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;

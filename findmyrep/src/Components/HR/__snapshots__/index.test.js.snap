@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HR component renders with proper styling 1`] = `
+.c0 {
+  border: 1px solid #eee;
+}
+
+<hr
+  className="c0"
+/>
+`;

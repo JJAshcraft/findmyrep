@@ -5,7 +5,7 @@ import ControlSection from "./Features/ControlSection";
 import MainSection from "./Features/MainSection";
 import styled from "styled-components";
 
-const AppWrapper = styled.div`
+export const AppWrapper = styled.div`
   position: relative;
   top: 0;
   bottom: 0;

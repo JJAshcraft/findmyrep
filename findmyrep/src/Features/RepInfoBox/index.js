@@ -4,8 +4,8 @@ import styled from "styled-components";
 import Subheader from "../../Components/Subheader";
 import H1 from "../../Components/H1";
 import propTypes from "prop-types";
-
-const StyledGrid = styled(Grid)`
+import StyledDiv from "../../Components/StyledDiv";
+export const StyledGrid = styled(Grid)`
   position: relative;
   height: auto;
 `;
@@ -13,28 +13,6 @@ const StyledGrid = styled(Grid)`
 const ListH1 = styled(H1)`
   color: #616470;
   display: inline;
-`;
-
-const StyledInput = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  border: none;
-  color: grey;
-  background-color: #f8f8f9;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: 500;
-  font-family: "Montserrat", sans-serif;
-  height: 45px;
-  padding: 0 5px 0 5px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  p {
-    white-space: nowrap;
-    vertical-align: middle;
-  }
 `;
 
 const RepInfoBox = props => {
@@ -60,33 +38,33 @@ const RepInfoBox = props => {
           justify="space-evenly"
         >
           <StyledGrid item xs={12}>
-            <StyledInput>
+            <StyledDiv>
               <p>{firstName || "First Name"}</p>
-            </StyledInput>
+            </StyledDiv>
           </StyledGrid>
 
           <StyledGrid item xs={12}>
-            <StyledInput>
+            <StyledDiv>
               <p>{lastName || "Last Name"}</p>
-            </StyledInput>
+            </StyledDiv>
           </StyledGrid>
 
           <StyledGrid item xs={12}>
-            <StyledInput>
+            <StyledDiv>
               <p>{props.memberInfo.district || "District"}</p>
-            </StyledInput>
+            </StyledDiv>
           </StyledGrid>
 
           <StyledGrid item xs={12}>
-            <StyledInput>
+            <StyledDiv>
               <p>{props.memberInfo.phone || "Phone"}</p>
-            </StyledInput>
+            </StyledDiv>
           </StyledGrid>
 
           <StyledGrid item xs={12}>
-            <StyledInput>
+            <StyledDiv>
               <p>{props.memberInfo.office || "Office"}</p>
-            </StyledInput>
+            </StyledDiv>
           </StyledGrid>
         </Grid>
       </StyledGrid>
