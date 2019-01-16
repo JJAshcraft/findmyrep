@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import styled from "styled-components";
 import Subheader from "../../Components/Subheader";
 import H1 from "../../Components/H1";
+import propTypes from "prop-types";
 
 const StyledGrid = styled(Grid)`
   position: relative;
@@ -14,8 +15,10 @@ const ListH1 = styled(H1)`
   display: inline;
 `;
 
-const StyledInput = styled.input`
+const StyledInput = styled.div`
   width: 100%;
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
   border: none;
   color: grey;
@@ -24,10 +27,13 @@ const StyledInput = styled.input`
   font-size: 16px;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
-  height: 40px;
+  height: 45px;
   padding: 0 5px 0 5px;
-  &::placeholder {
-    color: #b7b6b5;
+  overflow-x: auto;
+  overflow-y: hidden;
+  p {
+    white-space: nowrap;
+    vertical-align: middle;
   }
 `;
 
@@ -44,7 +50,7 @@ const RepInfoBox = props => {
   return (
     <Grid container spacing={24}>
       <StyledGrid item xs={12}>
-        <Subheader title={props.title}>
+        <Subheader>
           <ListH1>Info </ListH1>
         </Subheader>
         <Grid
@@ -54,43 +60,33 @@ const RepInfoBox = props => {
           justify="space-evenly"
         >
           <StyledGrid item xs={12}>
-            <StyledInput
-              readOnly
-              value={firstName || "First Name"}
-              placeholder="First Name"
-            />
+            <StyledInput>
+              <p>{firstName || "First Name"}</p>
+            </StyledInput>
           </StyledGrid>
 
           <StyledGrid item xs={12}>
-            <StyledInput
-              readOnly
-              value={lastName || "Last Name"}
-              placeholder="Last Name"
-            />
+            <StyledInput>
+              <p>{lastName || "Last Name"}</p>
+            </StyledInput>
           </StyledGrid>
 
           <StyledGrid item xs={12}>
-            <StyledInput
-              readOnly
-              value={props.memberInfo.district}
-              placeholder="District"
-            />
+            <StyledInput>
+              <p>{props.memberInfo.district || "District"}</p>
+            </StyledInput>
           </StyledGrid>
 
           <StyledGrid item xs={12}>
-            <StyledInput
-              readOnly
-              value={props.memberInfo.phone}
-              placeholder="Phone"
-            />
+            <StyledInput>
+              <p>{props.memberInfo.phone || "Phone"}</p>
+            </StyledInput>
           </StyledGrid>
 
           <StyledGrid item xs={12}>
-            <StyledInput
-              readOnly
-              value={props.memberInfo.office}
-              placeholder="Office"
-            />
+            <StyledInput>
+              <p>{props.memberInfo.office || "Office"}</p>
+            </StyledInput>
           </StyledGrid>
         </Grid>
       </StyledGrid>
@@ -100,11 +96,6 @@ const RepInfoBox = props => {
 
 export default RepInfoBox;
 
-RepInfoBox.defaultProps = {
-  memberInfo: {
-    phone: "Phone",
-    office: "Office",
-    district: "District",
-    name: "First Last"
-  }
+RepInfoBox.propTypes = {
+  memberInfo: propTypes.object
 };

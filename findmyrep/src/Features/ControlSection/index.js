@@ -1,9 +1,11 @@
 import React, { Component, Fragment } from "react";
+import PropTypes from "prop-types";
 import Grid from "@material-ui/core/Grid";
 import RepDropDown from "../../Components/RepDropDown";
 import StateDropDown from "../../Components/StateDropDown";
 import FieldSet from "../../Components/FieldSet";
 import SubmitButton from "../../Components/SubmitButton";
+import propTypes from "prop-types";
 
 class ControlSection extends Component {
   constructor() {
@@ -13,6 +15,12 @@ class ControlSection extends Component {
       stateDisabled: true
     };
   }
+  static propTypes = {
+    changeTitle: PropTypes.func,
+    changeState: PropTypes.func,
+    handleSubmit: PropTypes.func,
+    disabled: PropTypes.bool
+  };
 
   disableForm = title => {
     if (title !== "") {
@@ -58,3 +66,9 @@ class ControlSection extends Component {
 }
 
 export default ControlSection;
+
+ControlSection.propTypes = {
+  changeTitle: propTypes.func,
+  changeState: propTypes.func,
+  disabled: propTypes.bool
+};

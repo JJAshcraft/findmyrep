@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import styled from "styled-components";
 import Subheader from "../../Components/Subheader";
 import H1 from "../../Components/H1";
+import propTypes from "prop-types";
 
 const StyledGrid = styled(Grid)`
   position: relative;
@@ -81,3 +82,9 @@ const RepTable = props => {
 };
 
 export default RepTable;
+
+RepTable.propTypes = {
+  data: propTypes.array,
+  title: propTypes.string,
+  updateInfoBox: propTypes.func
+};

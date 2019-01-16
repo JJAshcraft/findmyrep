@@ -20,13 +20,13 @@ const styles = theme => ({
 class RepDropDown extends Component {
   state = {
     title: "",
-    name: "hai",
     labelWidth: 0
   };
 
-  handleChange = name => event => {
-    this.props.disableForm(event.target.value);
-    this.setState({ [name]: event.target.value });
+  handleChange = e => {
+    const name = e.target.name;
+    this.props.disableForm(e.target.value);
+    this.setState({ [name]: e.target.value });
   };
 
   render(props) {
@@ -36,7 +36,8 @@ class RepDropDown extends Component {
         <FormControl className={classes.formControl}>
           <NativeSelect
             value={this.state.age}
-            onChange={this.handleChange("title")}
+            name="title"
+            onChange={this.handleChange}
             className={classes.selectEmpty}
           >
             <option value="" />

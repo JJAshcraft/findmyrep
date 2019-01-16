@@ -24,14 +24,15 @@ class StateDropDown extends Component {
 
     this.state = {
       USState: "",
-      name: "hai",
+
       labelWidth: 0
     };
   }
 
-  handleChange = name => event => {
-    this.props.changeState(event.target.value);
-    this.setState({ [name]: event.target.value });
+  handleChange = e => {
+    const name = e.target.name;
+    this.props.changeState(e.target.value);
+    this.setState({ [name]: e.target.value });
   };
   render() {
     const { classes } = this.props;
@@ -42,7 +43,8 @@ class StateDropDown extends Component {
           <NativeSelect
             disabled={this.props.disabled}
             value={this.state.age}
-            onChange={this.handleChange("USState")}
+            name="USState"
+            onChange={this.handleChange}
             className={classes.selectEmpty}
           >
             <option value="" />

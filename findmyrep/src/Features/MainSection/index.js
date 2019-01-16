@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import RepTable from "../RepTable";
 import RepInfoBox from "../RepInfoBox";
 import Grid from "@material-ui/core/Grid";
+import propTypes from "prop-types";
 
 const MainSection = props => {
   return (
@@ -23,3 +24,10 @@ const MainSection = props => {
 };
 
 export default MainSection;
+
+MainSection.propTypes = {
+  data: propTypes.array,
+  title: propTypes.string,
+  updateInfoBox: propTypes.func,
+  memberInfo: propTypes.object
+};
