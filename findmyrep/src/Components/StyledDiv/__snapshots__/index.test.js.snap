@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledDiv renders with proper styling 1`] = `
+.c0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+  border: none;
+  color: grey;
+  background-color: #f8f8f9;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Montserrat",sans-serif;
+  height: 45px;
+  padding: 0 5px 0 5px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.c0 p {
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+<div
+  className="c0"
+/>
+`;

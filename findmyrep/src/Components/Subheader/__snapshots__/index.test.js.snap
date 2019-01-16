@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HR component renders with proper styling 1`] = `
+.c0 {
+  padding: 10px 0 10px 0;
+}
+
+<div
+  className="MuiGrid-container-1 MuiGrid-spacing-xs-32-26 c0"
+>
+  <div
+    className="MuiGrid-item-2 MuiGrid-grid-xs-12-41"
+  />
+</div>
+`;

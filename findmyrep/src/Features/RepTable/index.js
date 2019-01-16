@@ -3,15 +3,12 @@ import Grid from "@material-ui/core/Grid";
 import styled from "styled-components";
 import Subheader from "../../Components/Subheader";
 import H1 from "../../Components/H1";
+import MemberH1 from "../../Components/MemberH1";
+import Rep from "../../Components/Rep";
 import propTypes from "prop-types";
 
 const StyledGrid = styled(Grid)`
   position: relative;
-`;
-
-const MemberH1 = styled(H1)`
-  color: #06a7ed;
-  display: inline;
 `;
 
 const ListH1 = styled(H1)`
@@ -28,15 +25,6 @@ const DivHeader = styled.div`
   align-items: center;
   padding-left: 8px;
   margin-bottom: 10px;
-`;
-
-const Rep = styled.div`
-  display: flex;
-  align-items: baseline;
-  cursor: pointer;
-  padding-left: 8px;
-  height: 45px;
-  border-bottom: 1px solid #eee;
 `;
 
 const RepTable = props => {

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HR component renders with proper styling 1`] = `
+.c0 {
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  background-color: #06a7ed;
+  width: 100%;
+  border-radius: 2px;
+  height: 40px;
+}
+
+.c0:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+<button
+  className="c0"
+/>
+`;

@@ -8,7 +8,7 @@ import Adapter from "enzyme-adapter-react-16";
 
 configure({ adapter: new Adapter() });
 
-describe("Control Section", () => {
+describe("Testing for RepInfoBox", () => {
   const memberInfo = {
     name: "Josh Ashcraft",
     office: "1234 test drive lane, Tampa Florida",
