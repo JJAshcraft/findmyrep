@@ -37,20 +37,22 @@ const RepTable = props => {
       </StyledGrid>
       <StyledGrid item xs={9}>
         <DivHeader>Name</DivHeader>
-        {props.data
-          ? props.data.map(rep => {
-              return (
-                <Rep
-                  key={Math.random()}
-                  onClick={() => {
-                    props.updateInfoBox(rep.name);
-                  }}
-                >
-                  <p>{rep.name}</p>
-                </Rep>
-              );
-            })
-          : null}
+        {props.data ? (
+          props.data.map(rep => {
+            return (
+              <Rep
+                key={Math.random()}
+                onClick={() => {
+                  props.updateInfoBox(rep.name);
+                }}
+              >
+                <p>{rep.name}</p>
+              </Rep>
+            );
+          })
+        ) : (
+          <p>No results found.</p>
+        )}
       </StyledGrid>
       <StyledGrid item xs={3}>
         <DivHeader>Party</DivHeader>
