@@ -50,9 +50,11 @@ class App extends Component {
   handleSubmit = () => {
     let title = this.state.title.toLowerCase();
     let USState = this.state.USState.toLowerCase();
-    axios.get(`http://127.0.0.1:3300/${title}/${USState}`).then(response => {
-      this.setState({ data: response.data.results });
-    });
+    axios
+      .get(`https://furtive-soprano.glitch.me/${title}/${USState}`)
+      .then(response => {
+        this.setState({ data: response.data.results });
+      });
   };
 
   updateInfoBox = name => {
